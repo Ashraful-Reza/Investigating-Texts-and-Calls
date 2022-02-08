@@ -71,8 +71,8 @@ Time Complexity: O(n)
 - difference operation, e.g `l.difference(l)`
     - Complexity: O(n)
 - sorted
-    - Complexity: O(nlog2n)
+    - Complexity: O(n)
     
 ```
-Time Complexity: O(nlog2n)
+Time Complexity: O(n)
 ```

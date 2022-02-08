@@ -19,8 +19,13 @@ Print a message:
 "<telephone number> spent the longest time, <total time> seconds, on the phone during 
 September 2016.".
 """
-call_duration_list = [col[3] for col in calls]
-max_call_index = call_duration_list.index(max(call_duration_list))
 
-print(f"{calls[max_call_index][0]} spent the longest time, {calls[max_call_index][3]} seconds, on the phone during September 2016.")
+call_sender_dict = {}
+
+for call in calls:
+    call_sender_dict[call[1]] = call_sender_dict.get(call[1], 0) + int(call[3])
+    call_sender_dict[call[0]] = call_sender_dict.get(call[0], 0) + int(call[3])
+    
+print(f"{max(call_sender_dict, key=call_sender_dict.get)} spent the longest time, {max(call_sender_dict.values())} seconds, on the phone during September 2016.")
+
 

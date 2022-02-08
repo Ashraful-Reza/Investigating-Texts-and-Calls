@@ -45,17 +45,22 @@ to other fixed lines in Bangalore."
 The percentage should have 2 decimal digits
 """
 
-call_by_bangalore = [col for col in calls if col[0][0:5] == "(080)"]
+called_by_bangalore = [col for col in calls if col[0][0:5] == "(080)"]
 
 # Part A ###############################################################################
 receiver_codes = []
-for call in call_by_bangalore:
-  if call[1][0] == '(':
-    receiver_code = call[1][1:4]
+
+for call in called_by_bangalore:
+  if "(" in call[1]:
+    receiver_code = call[1][1:call[1].find(')')]
+  elif " " in call[1]:
+    receiver_code = call[1][0:4]
   else:
-    receiver_code = call[1][0:3]
+    receiver_code = "140"
+
   if receiver_code not in receiver_codes:
     receiver_codes.append(receiver_code)
+
 sorted_receiver_codes = sorted(receiver_codes)
 
 print("The numbers called by people in Bangalore have codes:")
@@ -63,19 +68,22 @@ for code in sorted_receiver_codes:
   print(code)
 
 # Part B ###############################################################################
-fixed_line_receivers = []
-for call in call_by_bangalore:
-  if call[1][0:2] == '(0':
-    fixed_line_receiver = call[1][1:4]
-  elif call[1][0:2] == '0':
-    fixed_line_receiver = call[1][0:3]
-  else: 
-    fixed_line_receiver = None
+#fixed_line_receivers = []
+#for call in called_by_bangalore:
+#  if call[1][0:2] == '(0':
+#    fixed_line_receiver = call[1][1:4]
+#  elif call[1][0:2] == '0':
+#    fixed_line_receiver = call[1][0:3]
+#  else: 
+#    fixed_line_receiver = None
+#
+#  if fixed_line_receiver not in fixed_line_receivers:
+#    if fixed_line_receiver != None:
+#      fixed_line_receivers.append(fixed_line_receiver)
 
-  if fixed_line_receiver not in fixed_line_receivers:
-    if fixed_line_receiver != None:
-      fixed_line_receivers.append(fixed_line_receiver)
+fixed_line_receivers = 0
+for call in called_by_bangalore:
+  if '(080)' in  call[1]:
+    fixed_line_receivers += 1
 
-print(fixed_line_receivers)
-
-print(f"{len(fixed_line_receivers)/len(call_by_bangalore)} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.")
+print(f"{int(fixed_line_receivers/len(called_by_bangalore)*100)} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.")

@@ -29,7 +29,7 @@ text_receiver_list = set(col[1] for col in texts)
 call_sender_list = set(col[0] for col in calls)
 call_receiver_list = set(col[1] for col in calls)
 
-marketing_numbers = text_sender_list.difference(text_receiver_list).difference(call_sender_list).difference(call_receiver_list)
+marketing_numbers = call_sender_list.difference(text_receiver_list).difference(text_sender_list).difference(call_receiver_list)
 sorted_marketing_numbers = sorted(marketing_numbers)
 
 print("These numbers could be telemarketers: ")

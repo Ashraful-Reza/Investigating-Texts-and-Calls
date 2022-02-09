@@ -86,4 +86,4 @@ for call in called_by_bangalore:
   if '(080)' in  call[1]:
     fixed_line_receivers += 1
 
-print(f"{int(fixed_line_receivers/len(called_by_bangalore)*100)} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.")
+print("{:.2f} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".format(fixed_line_receivers/len(called_by_bangalore)*100))

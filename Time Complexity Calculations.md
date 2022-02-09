@@ -47,17 +47,19 @@ Time Complexity: O(n)
 ## Task3
 
 ### Python Operations Used
-- Iteration, e.g `for v in l:`
-    - Complexity: O(n)
+- Iteration, e.g `for v in l:`, includes if operation
+    - Complexity: O(n^2)
 - Containment operation, e.g `x in/not in l`
     - Complexity: O(n)
 - Index operation, e.g `l[i]`
     - Complexity: O(1)
 - Append operation, e.g `l.append(5)`
     - Complexity: O(1)
+- sorted operation
+    - Complexity: O(nlogn)
 
 ```
-Time Complexity: O(n)
+Time Complexity: O(n^2)
 ```
 ## Task4
 
@@ -70,8 +72,8 @@ Time Complexity: O(n)
     - Complexity: O(n)
 - difference operation, e.g `l.difference(l)`
     - Complexity: O(n)
-- sorted
-    - Complexity: O(n)
+- sorted operation
+    - Complexity: O(nlogn)
     
 ```
 Time Complexity: O(n)

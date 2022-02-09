@@ -48,6 +48,7 @@ The percentage should have 2 decimal digits
 called_by_bangalore = [col for col in calls if col[0][0:5] == "(080)"]
 
 # Part A ###############################################################################
+
 receiver_codes = []
 
 for call in called_by_bangalore:
@@ -68,18 +69,6 @@ for code in sorted_receiver_codes:
   print(code)
 
 # Part B ###############################################################################
-#fixed_line_receivers = []
-#for call in called_by_bangalore:
-#  if call[1][0:2] == '(0':
-#    fixed_line_receiver = call[1][1:4]
-#  elif call[1][0:2] == '0':
-#    fixed_line_receiver = call[1][0:3]
-#  else: 
-#    fixed_line_receiver = None
-#
-#  if fixed_line_receiver not in fixed_line_receivers:
-#    if fixed_line_receiver != None:
-#      fixed_line_receivers.append(fixed_line_receiver)
 
 fixed_line_receivers = 0
 for call in called_by_bangalore:

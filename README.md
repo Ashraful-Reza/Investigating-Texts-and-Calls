@@ -2,6 +2,8 @@
 
 In this project, I completed five tasks based on a fabricated set of calls and texts exchanged during September 2016. I used Python to analyze and answer questions about the texts and calls contained in the dataset. Lastly, I performed run time analysis of my solution and determine its efficiency.
 
+<img src="https://www.mycustomer.com/sites/default/files/istock_vasjakoman_telephone.jpg" width="800px" height="auto">
+
 In this project:
 
 - Apply my Python knowledge to breakdown problems into their inputs and outputs.

@@ -76,5 +76,5 @@ Time Complexity: O(n^2)
     - Complexity: O(nlogn)
     
 ```
-Time Complexity: O(n)
+Time Complexity: O(nlogn)
 ```

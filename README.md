@@ -6,8 +6,8 @@ In this project, I completed five tasks based on a fabricated set of calls and t
 
 In this project:
 
-- Apply my Python knowledge to breakdown problems into their inputs and outputs.
-- Perform an efficiency analysis of your solution.
+- Applied my Python knowledge to breakdown problems into their inputs and outputs.
+- Performed an efficiency analysis of my solution.
 
 ## About the data
 The text and call data are provided in .csv files.
